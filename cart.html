@@ -16,7 +16,27 @@
 <h2 id="total">المجموع: 0.000 د.ك</h2>
 
 <button onclick="checkout()">إتمام الطلب</button>
+<div id="checkoutForm" style="display:none;">
 
+  <h2>بيانات الطلب</h2>
+
+  <input id="customerName" placeholder="الاسم">
+
+  <br><br>
+
+  <input id="customerAddress" placeholder="العنوان">
+
+  <br><br>
+
+  <input id="customerPhone" placeholder="رقم الهاتف">
+
+  <br><br>
+
+  <button onclick="confirmOrder()">
+    تأكيد الطلب
+  </button>
+
+</div>
 <br><br>
 
 <a href="index.html">
