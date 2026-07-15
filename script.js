@@ -1,5 +1,13 @@
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+cart = cart.map(item => {
+  if (!item.quantity) {
+    item.quantity = 1;
+  }
+  return item;
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
 function updateCartCount() {
   let count = document.getElementById("cartCount");
 
