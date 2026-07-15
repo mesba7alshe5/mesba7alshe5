@@ -30,7 +30,7 @@ function addToCart(name, price, image) {
       image: image,
       quantity: 1
     });
-  }
+  
 
   localStorage.setItem("cart", JSON.stringify(cart));
 
