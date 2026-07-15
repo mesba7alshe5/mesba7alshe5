@@ -38,6 +38,11 @@ function showCart() {
         <img src="${item.image}" width="150">
         <h2>${item.name}</h2>
         <p class="price">${item.price.toFixed(3)} د.ك</p>
+
+        <button onclick="removeFromCart(${index})">
+          حذف
+        </button>
+
       </div>
     `;
   });
