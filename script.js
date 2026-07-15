@@ -32,12 +32,7 @@ function addToCart(name, price, image) {
     });
   
 
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  updateCartCount();
-
-  alert("تمت إضافة المنتج إلى السلة");
-}
+  
 
   localStorage.setItem("cart", JSON.stringify(cart));
 updateCartCount();
