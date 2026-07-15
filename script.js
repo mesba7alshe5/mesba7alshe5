@@ -1,1 +1,45 @@
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price, image) {
+  cart.push({
+    name: name,
+    price: price,
+    image: image
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("تمت إضافة المنتج إلى السلة");
+}
+
+function showCart() {
+  let box = document.getElementById("cartItems");
+
+  if (!box) return;
+
+  box.innerHTML = "";
+
+  let total = 0;
+
+  cart.forEach((item) => {
+    total += item.price;
+
+    box.innerHTML += `
+      <div class="product">
+        <img src="${item.image}" width="150">
+        <h2>${item.name}</h2>
+        <p class="price">${item.price.toFixed(3)} د.ك</p>
+      </div>
+    `;
+  });
+
+  document.getElementById("total").innerHTML =
+    "المجموع: " + total.toFixed(3) + " د.ك";
+}
+
+function checkout() {
+  alert("سيتم تجهيز الطلب");
+}
+
+showCart();
