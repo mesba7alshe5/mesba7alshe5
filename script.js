@@ -137,3 +137,6 @@ alert("اشتغلت الدالة");
   );
 
 }
+function confirmOrder() {
+  alert("اشتغل زر التأكيد");
+}
