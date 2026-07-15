@@ -98,3 +98,16 @@
   color: white;
   margin-top: 20px;
 }
+button,
+.cart-button,
+a {
+  background: #000000 !important;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
