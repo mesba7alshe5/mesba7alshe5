@@ -30,7 +30,7 @@ function showCart() {
 
   let total = 0;
 
-  cart.forEach((item) => {
+cart.forEach((item, index) => {
     total += item.price;
 
     box.innerHTML += `
