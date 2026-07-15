@@ -46,7 +46,7 @@ function showCart() {
   let total = 0;
 
 cart.forEach((item, index) => {
-    total += item.price;
+    total += item.price * item.quantity;
 
     box.innerHTML += `
       <div class="product">
