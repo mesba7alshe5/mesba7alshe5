@@ -54,6 +54,12 @@ cart.forEach((item, index) => {
         <h2>${item.name}</h2>
         <p class="price">${item.price.toFixed(3)} د.ك</p>
 
+<p>الكمية: ${item.quantity}</p>
+
+<button onclick="changeQuantity(${index}, 1)">+</button>
+
+<button onclick="changeQuantity(${index}, -1)">-</button>
+
         <button onclick="removeFromCart(${index})">
           حذف
         </button>
