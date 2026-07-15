@@ -51,3 +51,6 @@ function checkout() {
 }
 
 showCart();
+function openCart() {
+  window.location.href = "cart.html";
+}
