@@ -66,6 +66,9 @@ function removeFromCart(index) {
 
   showCart();
   updateCartCount();
+}
+
+
 function confirmOrder() {
 
   let name = document.getElementById("customerName").value;
@@ -101,92 +104,6 @@ function confirmOrder() {
     "\n\nالطلب:" +
     products +
     "\n\nالمجموع: " + total.toFixed(3) + " د.ك";
-
-  let whatsapp =
-    "https://wa.me/96569092930?text=" + encodeURIComponent(message);
-
-  window.location.href = whatsapp;
-}
-
-  let order = "";
-
-  cart.forEach((item, index) => {
-    order += 
-    "\n" + (index + 1) + "- " + item.name +
-    " (" + item.price.toFixed(3) + " د.ك)";
-  });
-
-  let total = 0;
-  cart.forEach(item => {
-    total += item.price;
-  });
-
-  let message =
-  "طلب جديد من متجر mesba7_alshe5\n\n" +
-  "الاسم: " + name +
-  "\nالهاتف: " + phone +
-  "\nالعنوان: " +
-  area + " - قطعة " + block +
-  " - شارع " + street +
-  " - منزل " + house +
-  "\n\nالمسابيح:" +
-  order +
-  "\n\nالمجموع: " + total.toFixed(3) + " د.ك";
-
-  let whatsapp =
-  "https://wa.me/96569092930?text=" + encodeURIComponent(message);
-
-  window.location.href = whatsapp;
-}
-
-  let name = document.getElementById("customerName").value;
-  let phone = document.getElementById("customerPhone").value;
-
-  let area = document.getElementById("customerArea").value;
-  let block = document.getElementById("customerBlock").value;
-  let street = document.getElementById("customerStreet").value;
-  let house = document.getElementById("customerHouse").value;
-
-  if (!name || !phone || !area || !block || !street || !house) {
-    alert("يرجى تعبئة جميع البيانات");
-    return;
-  }
-
-  alert(
-    "تم استلام الطلب\n\n" +
-    "الاسم: " + name +
-    "\nالهاتف: " + phone +
-    "\nالعنوان: " +
-    area + " - قطعة " +
-    block + " - شارع " +
-    street + " - منزل " +
-    house
-  );
-
-}
-function confirmOrder() {
-
-  let name = document.getElementById("customerName").value;
-  let phone = document.getElementById("customerPhone").value;
-
-  let area = document.getElementById("customerArea").value;
-  let block = document.getElementById("customerBlock").value;
-  let street = document.getElementById("customerStreet").value;
-  let house = document.getElementById("customerHouse").value;
-
-  if (!name || !phone || !area || !block || !street || !house) {
-    alert("يرجى تعبئة جميع البيانات");
-    return;
-  }
-
-  let message =
-    "طلب جديد من متجر mesba7_alshe5\n\n" +
-    "الاسم: " + name +
-    "\nالهاتف: " + phone +
-    "\nالعنوان: " +
-    area + " - قطعة " + block +
-    " - شارع " + street +
-    " - منزل " + house;
 
   let whatsapp =
     "https://wa.me/96569092930?text=" + encodeURIComponent(message);
