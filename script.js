@@ -1,10 +1,7 @@
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-cart = cart.map(item => {
-  if (!item.quantity) {
-    item.quantity = 1;
-  }
-  return item;
+cart.forEach(item => {
+  item.quantity = item.quantity || 1;
 });
 
 localStorage.setItem("cart", JSON.stringify(cart));
