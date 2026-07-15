@@ -59,3 +59,11 @@ showCart();
 function openCart() {
   window.location.href = "cart.html";
 }
+function removeFromCart(index) {
+  cart.splice(index, 1);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  showCart();
+  updateCartCount();
+}
