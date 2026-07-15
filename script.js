@@ -67,7 +67,7 @@ function removeFromCart(index) {
   showCart();
   updateCartCount();
 function confirmOrder() {
-alert("اشتغلت الدالة");
+
   let name = document.getElementById("customerName").value;
   let phone = document.getElementById("customerPhone").value;
 
@@ -80,6 +80,33 @@ alert("اشتغلت الدالة");
     alert("يرجى تعبئة جميع البيانات");
     return;
   }
+
+  let products = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    products += "\n" + (index + 1) + "- " + item.name + " - " + item.price.toFixed(3) + " د.ك";
+    total += item.price;
+  });
+
+  let message =
+    "طلب جديد من متجر mesba7_alshe5\n\n" +
+    "الاسم: " + name +
+    "\nالهاتف: " + phone +
+    "\n\nالعنوان:" +
+    "\nالمنطقة: " + area +
+    "\nالقطعة: " + block +
+    "\nالشارع: " + street +
+    "\nالمنزل: " + house +
+    "\n\nالطلب:" +
+    products +
+    "\n\nالمجموع: " + total.toFixed(3) + " د.ك";
+
+  let whatsapp =
+    "https://wa.me/96569092930?text=" + encodeURIComponent(message);
+
+  window.location.href = whatsapp;
+}
 
   let order = "";
 
