@@ -67,7 +67,7 @@ function removeFromCart(index) {
   showCart();
   updateCartCount();
 function confirmOrder() {
-
+alert("اشتغلت الدالة");
   let name = document.getElementById("customerName").value;
   let phone = document.getElementById("customerPhone").value;
 
