@@ -1,5 +1,6 @@
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+localStorage.removeItem("cart");
 cart.forEach(item => {
   item.quantity = item.quantity || 1;
 });
