@@ -67,3 +67,30 @@ function removeFromCart(index) {
   showCart();
   updateCartCount();
 }
+function confirmOrder() {
+
+  let name = document.getElementById("customerName").value;
+  let phone = document.getElementById("customerPhone").value;
+
+  let area = document.getElementById("customerArea").value;
+  let block = document.getElementById("customerBlock").value;
+  let street = document.getElementById("customerStreet").value;
+  let house = document.getElementById("customerHouse").value;
+
+  if (!name || !phone || !area || !block || !street || !house) {
+    alert("يرجى تعبئة جميع البيانات");
+    return;
+  }
+
+  alert(
+    "تم استلام الطلب\n\n" +
+    "الاسم: " + name +
+    "\nالهاتف: " + phone +
+    "\nالعنوان: " +
+    area + " - قطعة " +
+    block + " - شارع " +
+    street + " - منزل " +
+    house
+  );
+
+}
