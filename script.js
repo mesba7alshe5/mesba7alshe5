@@ -52,7 +52,7 @@ cart.forEach((item, index) => {
 }
 
 function checkout() {
-  alert("سيتم تجهيز الطلب");
+  document.getElementById("checkoutForm").style.display = "block";
 }
 
 showCart();
